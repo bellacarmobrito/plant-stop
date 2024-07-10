@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/bonsai.png" type="image/x-icon" />
+    <script src="../js/main.js" defer></script>
+
+    <title>PlantStop</title>
+  </head>
+
+  <body>
+    <header class="container">
+      <img
+        src="/assets/img/logo.png"
+        alt="Uma planta com o texto PlantStop que se traduzido se lê Parada das Plantas, um e-commerce de plantas"
+      />
+
+      <nav>
+        <ul class="navbar-container">
+          <li>
+            <a class="navbar-link" href="#buy">Comprar</a>
+          </li>
+          <li>
+            <a class="navbar-link" href="#about">Sobre</a>
+          </li>
+          <li>
+            <a class="navbar-link" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside class="ad-container container">
+      <p>Nova espécie de Philodendron disponíveis!</p>
+      <a href="#">Saiba mais!</a>
+    </aside>
+
+    <main class="container headline">
+      <img src="./img/bonsai.png" alt="planta ornamental" />
+
+      <div class="headline-text">
+        <p>Seu melhor shopping para coisas <span>verdes</span>!</p>
+        <button>Plantas disponíveis</button>
+      </div>
+    </main>
+
+    <section class="sobre container" id="about">
+      <div class="sobre-text">
+        <h2>Quem somos nós ?</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate a
+          commodi excepturi iusto ad, consectetur accusantium modi deserunt odio
+          animi, ipsum, non vel harum quas! Error, incidunt ex accusantium
+          quasi, vitae, blanditiis libero sequi saepe quas labore facilis. Culpa
+          libero, laboriosam dolores enim suscipit neque ducimus doloribus
+          adipisci molestiae atque voluptatibus aspernatur amet quia numquam
+          rerum cum sequi minus consequatur rem impedit. Esse, totam
+          reprehenderit omnis dicta delectus id nulla iste, harum debitis sit
+          quod?
+        </p>
+      </div>
+
+      <img
+        src="./img/Ellipse 2.png"
+        alt="mulher loira, branca, segurando uma planta"
+      />
+    </section>
+
+    <section class="best-sellers">
+      <div id="buy">
+        <h2 class="best-sellers-title">Mais vendidas</h2>
+
+        <ul class="plant-names">
+          <li class="plant-box">
+            <img src="./img/planta01.png" alt="planta lírio da paz" />
+            <h4 lass="nowrap">Lírio da paz</h4>
+          </li>
+
+          <li class="plant-box">
+            <img src="./img/planta02.png" alt="planta bigode de gato" />
+            <h4 class="nowrap">Bigode de gato</h4>
+          </li>
+
+          <li class="plant-box">
+            <img src="./img/planta03.png" alt="planta espada de São Jorge" />
+            <h4 class="nowrap">Espada-de-São-Joge</h4>
+          </li>
+          <li class="plant-box">
+            <img src="./img/planta04.png" alt="planta copo de leite" />
+            <h4 class="nowrap">Copo-de-leite</h4>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <article class="contact-box" id="contact">
+      <div class="contact-div">
+        <div class="media-container">
+          <h2>Contato</h2>
+          <div class="media-box">
+            <img
+              src="./img/instagram.png"
+              alt="Instagram Logo"
+              width="70"
+              height="70"
+            />
+            <img
+              src="./img/facebook.png"
+              alt="Facebook Logo"
+              width="70"
+              height="70"
+            />
+            <img
+              src="./img/twitter.png"
+              alt="Twitter Logo"
+              width="70"
+              height="70"
+            />
+          </div>
+        </div>
+
+        <form action="">
+          <fieldset>
+            <p>
+              <label for="nome">Nome</label>
+              <br />
+              <input type="text" name="nome" id="nome" required />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <p>
+              <label for="email">Email</label>
+              <br />
+              <input type="text" name="email" id="email" required />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <p>
+              <label for="message">Mensagens</label>
+              <br />
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </p>
+          </fieldset>
+          <button class="submit-btn" type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="plant-side">
+        <img src="./img/planta-footer.png" alt="Mão segurando um vaso cinza" />
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span class="nowrap">
+        Copyright PlantStop&copy; <time id="year"></time
+      ></span>
+    </footer>
+  </body>
+</html>
