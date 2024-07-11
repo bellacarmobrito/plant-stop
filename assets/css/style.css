@@ -3,7 +3,6 @@
   --second-color: #ffff;
   --third-color: #6cd052;
   --fourth-color: #000;
-
   --font-size: 2.5rem;
   --margins: 1.875rem;
   --border-radius: 0.625rem;
@@ -35,15 +34,6 @@ header {
   gap: var(--margins);
 }
 
-button {
-  cursor: pointer;
-}
-
-button:hover,
-button:focus {
-  filter: brightness(105%);
-}
-
 .navbar-container li::marker {
   content: "";
 }
@@ -59,6 +49,15 @@ button:focus {
 li .navbar-link:hover,
 li .navbar-link:focus {
   filter: brightness(120%);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  filter: brightness(105%);
 }
 
 .ad-container {
@@ -133,16 +132,16 @@ li .navbar-link:focus {
   margin-right: 4.375rem;
 }
 
+.sobre-text {
+  max-width: 35rem;
+  text-align: left;
+}
+
 .sobre-text h2 {
   font-size: var(--font-size);
   font-weight: 700;
   margin-bottom: 2.1875rem;
   line-height: 4.0625rem;
-}
-
-.sobre-text {
-  max-width: 35rem;
-  text-align: left;
 }
 
 .sobre-text p {
@@ -162,19 +161,6 @@ li .navbar-link:focus {
   margin-bottom: 5rem;
 }
 
-.plant-names {
-  display: flex;
-  list-style-type: none;
-  text-align: center;
-}
-
-.plant-box h4 {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.375rem;
-}
-
 .best-sellers img {
   display: flex;
 }
@@ -188,6 +174,19 @@ li .navbar-link:focus {
   font-weight: 700;
   text-align: center;
   margin-bottom: 2.5rem;
+}
+
+.plant-names {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+}
+
+.plant-box h4 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.375rem;
 }
 
 .nowrap {
@@ -205,21 +204,15 @@ li .navbar-link:focus {
   border: 0.3125rem solid var(--main-color);
 }
 
-.media-container h2 {
-  color: var(--fourth-color);
-  font-size: var(--font-size);
-  font-weight: 700;
-}
-
-fieldset {
-  border: none;
-}
-
 form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+fieldset {
+  border: none;
 }
 
 form label {
@@ -228,9 +221,9 @@ form label {
   font-weight: 700;
 }
 
-.contact-box input {
+.contact-box input,
+.contact-box textarea {
   width: 37.0625rem;
-  height: 3.5rem;
   border: none;
   border-radius: var(--border-radius);
   background: #d9d9d9;
@@ -238,14 +231,25 @@ form label {
   margin-bottom: 0.9375rem;
 }
 
+.contact-box input {
+  height: 3.5rem;
+}
+
 .contact-box textarea {
-  width: 37.0625rem;
   height: 13.625rem;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: var(--margins);
+  width: 11.625rem;
+  height: 3.6875rem;
   border: none;
   border-radius: var(--border-radius);
-  background: #d9d9d9;
-  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
-  resize: none;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  text-align: center;
+  font-size: 1.5625rem;
 }
 
 .media-container {
@@ -254,10 +258,17 @@ form label {
   margin-bottom: var(--margins);
 }
 
+.media-container h2 {
+  color: var(--fourth-color);
+  font-size: var(--font-size);
+  font-weight: 700;
+}
+
 .media-box {
   width: 12.5rem;
   display: flex;
 }
+
 .media-box img {
   width: 4.375rem;
   height: auto;
@@ -288,16 +299,4 @@ form label {
   color: var(--second-color);
   font-size: 1.2em;
   font-weight: 700;
-}
-
-.submit-btn {
-  margin-top: var(--margins);
-  width: 11.625rem;
-  height: 3.6875rem;
-  border: none;
-  border-radius: var(--border-radius);
-  background-color: var(--main-color);
-  color: var(--second-color);
-  text-align: center;
-  font-size: 1.5625rem;
 }
