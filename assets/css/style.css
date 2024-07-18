@@ -3,7 +3,11 @@
   --second-color: #ffff;
   --third-color: #6cd052;
   --fourth-color: #000;
+
   --font-size: 2.5rem;
+  --small-font-size: 1.375rem;
+  --large-font-size: 3.125rem;
+
   --margins: 1.875rem;
   --border-radius: 0.625rem;
 }
@@ -16,6 +20,7 @@
 
 html {
   font-family: "Mulish", sans-serif;
+  /* font-size: 62.5%; */
   scroll-behavior: smooth;
 }
 
@@ -27,6 +32,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  width: 99vw;
+  /* max-width: 1020px; */
 }
 
 .navbar-container {
@@ -43,7 +52,7 @@ header {
   list-style-type: none;
   color: var(--main-color);
   font-weight: 600;
-  font-size: 1.375rem;
+  font-size: var(--small-font-size);
 }
 
 li .navbar-link:hover,
@@ -69,6 +78,13 @@ button:focus {
   position: sticky;
   top: 0;
   z-index: 1;
+  /* 
+  flex-wrap: nowrap; */
+  white-space: nowrap;
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  width: 99vw;
+  /* max-width: 980px; */
 }
 
 .ad-container p {
@@ -79,6 +95,7 @@ button:focus {
 .ad-container a {
   text-decoration: none;
   font-size: 1.5rem;
+  cursor: pointer;
   color: rgb(255, 255, 255, 0.5);
 }
 
@@ -88,6 +105,10 @@ button:focus {
   align-items: center;
   margin-top: 0.9375rem;
   margin-bottom: 5rem;
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  width: 99vw;
+  /* max-width: 980px; */
 }
 
 .headline img {
@@ -98,7 +119,7 @@ button:focus {
 .headline-text {
   text-align: center;
   max-width: 25rem;
-  font-size: 3.125rem;
+  font-size: var(--large-font-size);
   font-weight: 700;
   display: flex;
   flex-direction: column;
@@ -124,6 +145,9 @@ button:focus {
   align-items: center;
   padding-top: 3.4375rem;
   max-height: 30.875rem;
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  width: 99vw;
 }
 
 .sobre img {
@@ -145,7 +169,7 @@ button:focus {
 }
 
 .sobre-text p {
-  font-size: 1.375rem;
+  font-size: var(--small-font-size);
   font-weight: 500;
   line-height: var(--margins);
   padding-bottom: 1.5625rem;
@@ -153,12 +177,22 @@ button:focus {
 
 .best-sellers {
   display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+
   cursor: pointer;
-  max-width: 100vw;
-  justify-content: center;
+  /* max-width: 99vw; */
+  /* height: auto; */
+
   list-style: none;
   margin-top: 6.25rem;
   margin-bottom: 5rem;
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  /* width: 100%; */
+
+  /* border: 2px solid rebeccapurple; */
 }
 
 .best-sellers img {
@@ -186,7 +220,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1.375rem;
+  font-size: var(--small-font-size);
 }
 
 .nowrap {
@@ -195,17 +229,26 @@ button:focus {
 
 .contact-box {
   display: flex;
-  max-width: 100vw;
+
   height: auto;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin: 9.375rem 20rem 3.125rem 20rem;
+  margin: 9.375rem 26rem 3.125rem 26rem;
+  /* padding: 2rem 5rem 2rem 5rem; */
+
+  /* gap: 50px; */
   border-radius: var(--border-radius);
   border: 0.3125rem solid var(--main-color);
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  /* width: calc(100% - 20rem); */
+  /* width: 100%; */
+  max-width: 90vw;
 }
 
 form {
-  width: 100%;
+  /* width: 100%;
+  max-width: 960px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,7 +266,7 @@ form label {
 
 .contact-box input,
 .contact-box textarea {
-  width: 37.0625rem;
+  width: 32rem;
   border: none;
   border-radius: var(--border-radius);
   background: #d9d9d9;
@@ -272,16 +315,17 @@ form label {
 .media-box img {
   width: 4.375rem;
   height: auto;
-  cursor: pointer;
 }
 
-.media-box img:hover {
+.media-logo:hover {
   filter: hue-rotate(250deg);
+  cursor: pointer;
 }
 
 .plant-side {
   display: flex;
-  width: 28.125rem;
+  justify-content: center;
+  width: 12rem;
 }
 
 .footer {
@@ -293,10 +337,205 @@ form label {
   height: 2.5rem;
   background-color: var(--main-color);
   color: var(--second-color);
+
+  /* Aula Mayke - Verificar se vai ou fica */
+  width: 99vw;
+  /* max-width: 980px; */
 }
 
 .footer span {
   color: var(--second-color);
   font-size: 1.2em;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 630px) {
+  .container img {
+    width: min(100%, 400px);
+  }
+
+  .headline {
+    flex-direction: column;
+  }
+
+  .headline img {
+    order: -1;
+    width: min(100%, 300px);
+  }
+
+  .sobre {
+    flex-direction: column;
+  }
+
+  .sobre img {
+    order: -1;
+  }
+
+  .best-sellers {
+    border: none;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .best-sellers img {
+    width: min(100%, 400px);
+  }
+}
+
+@media (max-width: 540px) {
+  nav {
+    display: none;
+  }
+
+  .container img {
+    width: min(100%, 150px);
+  }
+
+  .one,
+  .two,
+  .three {
+    background-color: var(--third-color);
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+
+    transition-duration: 0.3s;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+  }
+
+  .menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--second-color);
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-section.on nav {
+    display: block;
+  }
+
+  .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+  }
+
+  .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(8px, -9px);
+  }
+
+  .menu-section.on nav ul {
+    text-align: center;
+    display: block;
+  }
+
+  .menu-section.on nav ul a {
+    transition-duration: 0.5s;
+    font-size: 3rem;
+    line-height: 6rem;
+    display: block;
+  }
+}
+
+@media (max-width: 320px) {
+  header img {
+    padding-right: 10%;
+  }
+
+  .ad-container {
+    position: static;
+  }
+
+  .menu-toggle {
+    margin-left: 40px;
+  }
+
+  .headline-text {
+    font-size: 2rem;
+  }
+
+  section .sobre {
+    margin-bottom: 10px;
+  }
+
+  .sobre img {
+    margin: 0;
+  }
+
+  .sobre-text h2 {
+    text-align: center;
+  }
+
+  .sobre-text p {
+    text-align: justify;
+  }
+
+  .best-sellers {
+    width: 95%;
+    padding-top: 200px;
+    place-content: center;
+  }
+
+  .plant-box {
+    width: 100%;
+    padding-left: 45px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .best-sellers,
+  .plant-names,
+  .plant-box {
+    flex-wrap: wrap;
+  }
+
+  .plant-names img {
+    width: min(100%, 100px);
+    height: 100px;
+  }
+
+  .media-container {
+    padding: 15px;
+  }
+  .contact-box {
+    margin: 20px;
+    display: block;
+  }
+
+  .plant-side img {
+    display: none;
+  }
+
+  .submit-btn {
+    margin-bottom: 20px;
+  }
 }
