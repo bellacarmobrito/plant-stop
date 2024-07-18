@@ -436,7 +436,7 @@ form label {
 
   .menu-section.on .menu-toggle {
     position: absolute;
-    right: 50px;
+    right: 15px;
     top: 15px;
   }
 
@@ -465,9 +465,9 @@ form label {
   }
 }
 
-@media (max-width: 320px) {
-  header img {
-    padding-right: 10%;
+@media (max-width: 375px) {
+  .container {
+    padding: 1.125rem 1rem;
   }
 
   .ad-container {
@@ -499,14 +499,86 @@ form label {
   }
 
   .best-sellers {
-    width: 95%;
+    width: 100vw;
+    padding-top: 120px;
+    padding-left: 24%;
+    padding-right: 20%;
+  }
+
+  .best-sellers,
+  .plant-names,
+  .plant-box {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plant-names img {
+    width: min(100%, 100px);
+    height: 100px;
+  }
+
+  .media-container {
+    padding: 20px;
+  }
+  .contact-box {
+    margin: 40px;
+    display: block;
+  }
+
+  .plant-side img {
+    display: none;
+  }
+
+  .submit-btn {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 1.125rem 1rem;
+  }
+
+  .ad-container {
+    position: static;
+  }
+
+  .ad-container p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .headline-text {
+    font-size: 2rem;
+  }
+
+  section .sobre {
+    margin-bottom: 10px;
+  }
+
+  .sobre img {
+    margin: 0;
+  }
+
+  .sobre-text h2 {
+    text-align: center;
+  }
+
+  .sobre-text p {
+    text-align: justify;
+  }
+
+  .best-sellers {
+    width: 80%;
     padding-top: 200px;
-    place-content: center;
+    padding-left: 40px;
+    justify-content: center;
   }
 
   .plant-box {
     width: 100%;
-    padding-left: 45px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -526,9 +598,23 @@ form label {
   .media-container {
     padding: 15px;
   }
+
   .contact-box {
-    margin: 20px;
+    width: 100vw;
+    margin-left: 18px;
     display: block;
+  }
+
+  .contact-box form {
+    padding-left: 10px;
+  }
+
+  .contact-box form,
+  .contact-box fieldset,
+  .contact-box input,
+  .contact-box label,
+  .contact-box textarea {
+    width: 98%;
   }
 
   .plant-side img {
