@@ -465,6 +465,92 @@ form label {
   }
 }
 
+@media (max-width: 425px) {
+  .container {
+    padding: 1.125rem 1rem;
+  }
+
+  .ad-container {
+    position: static;
+  }
+
+  .menu-toggle {
+    margin-left: 40px;
+  }
+
+  .headline-text {
+    font-size: 2rem;
+  }
+
+  section .sobre {
+    margin-bottom: 10px;
+  }
+
+  .sobre img {
+    margin: 0;
+  }
+
+  .sobre-text h2 {
+    text-align: center;
+  }
+
+  .sobre-text p {
+    text-align: justify;
+  }
+
+  .best-sellers {
+    width: 100vw;
+    padding-top: 120px;
+    padding-left: 22%;
+    padding-right: 20%;
+  }
+
+  .best-sellers,
+  .plant-names,
+  .plant-box {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plant-names img {
+    width: min(100%, 100px);
+    height: 100px;
+  }
+
+  .media-container {
+    padding: 25px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .contact-box {
+    margin: 30px;
+    display: block;
+  }
+
+  .contact-box form {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .contact-box form,
+  .contact-box fieldset,
+  .contact-box input,
+  .contact-box label,
+  .contact-box textarea {
+    width: 98%;
+  }
+
+  .plant-side img {
+    display: none;
+  }
+
+  .submit-btn {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 375px) {
   .container {
     padding: 1.125rem 1rem;
@@ -571,10 +657,9 @@ form label {
   }
 
   .best-sellers {
-    width: 80%;
-    padding-top: 200px;
-    padding-left: 40px;
-    justify-content: center;
+    width: 95%;
+    padding-top: 120px;
+    place-content: center;
   }
 
   .plant-box {
@@ -584,10 +669,15 @@ form label {
     align-items: center;
   }
 
+  .plant-box:first-child {
+    padding-left: 2px;
+  }
+
   .best-sellers,
   .plant-names,
   .plant-box {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    justify-content: center;
   }
 
   .plant-names img {
